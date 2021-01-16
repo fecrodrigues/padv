@@ -28,4 +28,9 @@ class AdvogadoListaAdapter internal constructor(
     }
 
     override fun getItemCount() = advogados.size
+
+    internal fun setAdvogados(advogados: List<Advogado>) {
+        this.advogados = advogados
+        notifyDataSetChanged()
+    }
 }
