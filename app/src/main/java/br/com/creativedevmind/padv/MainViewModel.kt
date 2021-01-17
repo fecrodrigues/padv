@@ -17,7 +17,15 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     init {
 //        val produtoDao = LembretedeComprasRoomDatabase.getDatabase(application).produtoDao()
 //        repository = ProdutoRepository(produtoDao)
-        advogados = MutableLiveData<List<Advogado>>()
+
+        var liveData = MutableLiveData<List<Advogado>>()
+        var advogadosList = ArrayList<Advogado>()
+        advogadosList.add(Advogado("Breno"))
+        advogadosList.add(Advogado("Marino"))
+        advogadosList.add(Advogado("Miguel"))
+        liveData.postValue(advogadosList)
+
+        advogados = liveData
     }
 
     fun insert(advogado: Advogado) = viewModelScope.launch(Dispatchers.IO) {
