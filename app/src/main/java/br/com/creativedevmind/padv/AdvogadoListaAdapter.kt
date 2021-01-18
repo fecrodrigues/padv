@@ -28,8 +28,8 @@ class AdvogadoListaAdapter internal constructor(
 
     override fun onBindViewHolder(holder: AdvogadoViewHolder, position: Int) {
         val current = advogados[position]
-        holder.advogadoItemView.text = current.nome
-        holder.advogadoRatinBar.rating = 4F
+        holder.advogadoItemView.text = current.descricaoResumida
+        holder.advogadoRatinBar.rating = 4f
     }
 
     override fun getItemCount() = advogados.size

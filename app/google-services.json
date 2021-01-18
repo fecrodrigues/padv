@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "761350468970",
+    "project_id": "padv-2543e",
+    "storage_bucket": "padv-2543e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761350468970:android:a354ef999c0557993b2113",
+        "android_client_info": {
+          "package_name": "br.com.creativedevmind.padv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "761350468970-hnjbhmbgcs11ll983ko8clqc4loqe7pg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOVg8SW0su0cPh0MaH2NXiagct5h0j1N4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "761350468970-hnjbhmbgcs11ll983ko8clqc4loqe7pg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

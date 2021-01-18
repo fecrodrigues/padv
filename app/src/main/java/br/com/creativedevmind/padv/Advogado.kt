@@ -4,7 +4,11 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "tabela_advogado")
 data class Advogado(
-    @PrimaryKey @ColumnInfo(name = "nome_advogado")val nome: String
+    val nome: String,
+    val descricaoResumida: String,
+    val descricaoCompleta: String,
+    val areasDeAtuacao: List<String>,
+    val avaliacao: Float,
+    val foto: String
 )
