@@ -21,10 +21,10 @@
                     android:ems="10"
                     android:hint="Sobrenome"
                     android:inputType="textPersonName"
-                    app:layout_constraintEnd_toEndOf="@+id/input_firstname"
+                    app:layout_constraintEnd_toEndOf="@+id/tx_cadastro"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/input_firstname"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+                    app:layout_constraintStart_toStartOf="@+id/tx_cadastro"
+                    app:layout_constraintTop_toBottomOf="@+id/input_firstname" />
 
                 <com.airbnb.lottie.LottieAnimationView
                     android:id="@+id/logo"
@@ -39,7 +39,7 @@
                     app:lottie_rawRes="@raw/registration_form" />
 
                 <TextView
-                    android:id="@+id/input_firstname"
+                    android:id="@+id/tx_cadastro"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
@@ -53,28 +53,16 @@
                     app:layout_constraintTop_toBottomOf="@+id/logo" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName"
+                    android:id="@+id/input_firstname"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:ems="10"
                     android:hint="Nome"
                     android:inputType="textPersonName"
-                    app:layout_constraintEnd_toEndOf="@+id/input_firstname"
-                    app:layout_constraintStart_toStartOf="@+id/input_firstname"
-                    app:layout_constraintTop_toBottomOf="@+id/input_firstname" />
-
-                <EditText
-                    android:id="@+id/editTextDate"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:ems="10"
-                    android:hint="Data de Nascimento"
-                    android:inputType="date"
-                    app:layout_constraintEnd_toEndOf="@+id/input_lastname"
-                    app:layout_constraintStart_toStartOf="@+id/input_lastname"
-                    app:layout_constraintTop_toBottomOf="@+id/input_lastname" />
+                    app:layout_constraintEnd_toEndOf="@+id/tx_cadastro"
+                    app:layout_constraintStart_toStartOf="@+id/tx_cadastro"
+                    app:layout_constraintTop_toBottomOf="@+id/tx_cadastro" />
 
                 <EditText
                     android:id="@+id/input_email"
@@ -84,9 +72,8 @@
                     android:ems="10"
                     android:hint="Email"
                     android:inputType="textEmailAddress"
-                    app:layout_constraintEnd_toEndOf="@+id/editTextDate"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="@+id/editTextDate"
+                    app:layout_constraintEnd_toEndOf="@+id/input_phone"
+                    app:layout_constraintStart_toStartOf="@+id/input_phone"
                     app:layout_constraintTop_toBottomOf="@+id/input_phone" />
 
                 <EditText
@@ -97,13 +84,13 @@
                     android:ems="10"
                     android:hint="Celular"
                     android:inputType="textPersonName"
-                    app:layout_constraintEnd_toEndOf="@+id/input_email"
+                    app:layout_constraintEnd_toEndOf="@+id/input_birthdate"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/input_email"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+                    app:layout_constraintStart_toStartOf="@+id/input_birthdate"
+                    app:layout_constraintTop_toBottomOf="@+id/input_birthdate" />
 
                 <EditText
-                    android:id="@+id/editTextTextPassword"
+                    android:id="@+id/input_npassword"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -120,9 +107,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="É advogado? Complete as informações abaixo"
-                    app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
-                    app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+                    app:layout_constraintEnd_toEndOf="@+id/input_npassword"
+                    app:layout_constraintStart_toStartOf="@+id/input_npassword"
+                    app:layout_constraintTop_toBottomOf="@+id/input_npassword" />
 
                 <TextView
                     android:id="@+id/textView4"
@@ -130,7 +117,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:text="Área(s) de Atuação"
-                    app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
+                    app:layout_constraintStart_toStartOf="@+id/input_npassword"
                     app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
                 <CheckBox
@@ -190,12 +177,12 @@
                     android:gravity="start|top"
                     android:hint="Biografia (resumo)"
                     android:inputType="textMultiLine"
-                    app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
+                    app:layout_constraintEnd_toEndOf="@+id/input_npassword"
                     app:layout_constraintStart_toStartOf="@+id/cb_tributario"
                     app:layout_constraintTop_toBottomOf="@+id/cb_imobiliario" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName4"
+                    android:id="@+id/input_OABNumber"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
@@ -205,6 +192,28 @@
                     app:layout_constraintEnd_toEndOf="@+id/input_biography"
                     app:layout_constraintStart_toStartOf="@+id/input_biography"
                     app:layout_constraintTop_toBottomOf="@+id/input_biography" />
+
+                <Button
+                    android:id="@+id/btn_cadastrar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Finalizar Cadastro"
+                    app:layout_constraintEnd_toEndOf="@+id/input_OABNumber"
+                    app:layout_constraintStart_toStartOf="@+id/input_OABNumber"
+                    app:layout_constraintTop_toBottomOf="@+id/input_OABNumber" />
+
+                <EditText
+                    android:id="@+id/input_birthdate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:hint="Data de Nascimento"
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="@+id/input_lastname"
+                    app:layout_constraintStart_toStartOf="@+id/input_lastname"
+                    app:layout_constraintTop_toBottomOf="@+id/input_lastname" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

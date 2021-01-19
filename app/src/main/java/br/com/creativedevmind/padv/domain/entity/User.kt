@@ -8,6 +8,6 @@ data class User (
     val birthDate: Date? = null,
     val email: String = "",
     val phone: String = "",
-    val accessInfo: Login = Login("", ""),
-    val lawyerInfo: LawyerInfo = LawyerInfo(listOf<String>(), "", "")
+    val accessInfo: Login = Login(),
+    val lawyerInfo: LawyerInfo = LawyerInfo()
 )

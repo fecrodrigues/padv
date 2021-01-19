@@ -18,7 +18,7 @@ class SignupViewModel(
     val createState = MutableLiveData<RequestState<User>>()
 
     fun createUser(firstName: String, lastName: String, birthDate: Date, email: String, password: String,
-                isPenal: Boolean, phone: String, isTrabalhista: Boolean, isConsumidor: Boolean,
+                   phone: String, isPenal: Boolean, isTrabalhista: Boolean, isConsumidor: Boolean,
                 isTributario: Boolean, isImobiliario: Boolean, biography: String, OABNumber: String ) {
         viewModelScope.launch {
 
