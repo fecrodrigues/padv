@@ -1,13 +1,211 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.signup.SignupFragment">
+    android:fillViewport="true">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sc_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".presentation.signup.SignupFragment">
 
-</FrameLayout>
+                <EditText
+                    android:id="@+id/input_lastname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:hint="Sobrenome"
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="@+id/input_firstname"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/input_firstname"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/logo"
+                    android:layout_width="171dp"
+                    android:layout_height="91dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/registration_form" />
+
+                <TextView
+                    android:id="@+id/input_firstname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="32dp"
+                    android:text="Cadastre-se para aproveitar a plataforma"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:ems="10"
+                    android:hint="Nome"
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="@+id/input_firstname"
+                    app:layout_constraintStart_toStartOf="@+id/input_firstname"
+                    app:layout_constraintTop_toBottomOf="@+id/input_firstname" />
+
+                <EditText
+                    android:id="@+id/editTextDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:hint="Data de Nascimento"
+                    android:inputType="date"
+                    app:layout_constraintEnd_toEndOf="@+id/input_lastname"
+                    app:layout_constraintStart_toStartOf="@+id/input_lastname"
+                    app:layout_constraintTop_toBottomOf="@+id/input_lastname" />
+
+                <EditText
+                    android:id="@+id/input_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    app:layout_constraintEnd_toEndOf="@+id/editTextDate"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/editTextDate"
+                    app:layout_constraintTop_toBottomOf="@+id/input_phone" />
+
+                <EditText
+                    android:id="@+id/input_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:hint="Celular"
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="@+id/input_email"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/input_email"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+
+                <EditText
+                    android:id="@+id/editTextTextPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:hint="Senha"
+                    android:inputType="textPassword"
+                    app:layout_constraintEnd_toEndOf="@+id/input_email"
+                    app:layout_constraintStart_toStartOf="@+id/input_email"
+                    app:layout_constraintTop_toBottomOf="@+id/input_email" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="É advogado? Complete as informações abaixo"
+                    app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
+                    app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Área(s) de Atuação"
+                    app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                <CheckBox
+                    android:id="@+id/cb_penal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Penal"
+                    app:layout_constraintStart_toStartOf="@+id/textView4"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                <CheckBox
+                    android:id="@+id/cb_trabalhista"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Trabalhista"
+                    app:layout_constraintStart_toEndOf="@+id/cb_penal"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                <CheckBox
+                    android:id="@+id/cb_consumidor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Consumidor"
+                    app:layout_constraintStart_toEndOf="@+id/cb_trabalhista"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                <CheckBox
+                    android:id="@+id/cb_tributario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Tributário"
+                    app:layout_constraintStart_toStartOf="@+id/cb_penal"
+                    app:layout_constraintTop_toBottomOf="@+id/cb_penal" />
+
+                <CheckBox
+                    android:id="@+id/cb_imobiliario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Imobiliario"
+                    app:layout_constraintStart_toEndOf="@+id/cb_tributario"
+                    app:layout_constraintTop_toBottomOf="@+id/cb_trabalhista" />
+
+                <EditText
+                    android:id="@+id/input_biography"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="16dp"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:hint="Biografia (resumo)"
+                    android:inputType="textMultiLine"
+                    app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
+                    app:layout_constraintStart_toStartOf="@+id/cb_tributario"
+                    app:layout_constraintTop_toBottomOf="@+id/cb_imobiliario" />
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:ems="10"
+                    android:hint="Número OAB"
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="@+id/input_biography"
+                    app:layout_constraintStart_toStartOf="@+id/input_biography"
+                    app:layout_constraintTop_toBottomOf="@+id/input_biography" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
