@@ -1,14 +1,17 @@
-package br.com.creativedevmind.padv
+package br.com.creativedevmind.padv.presentation.list
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import br.com.creativedevmind.padv.Advogado
+import br.com.creativedevmind.padv.AdvogadoRepository
+import br.com.creativedevmind.padv.AdvogadoRoomDatabase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class AdvogadoListaViewModel(application: Application) : AndroidViewModel(application) {
+class ListViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repository: AdvogadoRepository
 
@@ -18,14 +21,14 @@ class AdvogadoListaViewModel(application: Application) : AndroidViewModel(applic
         val advogadoDAO = AdvogadoRoomDatabase.getDatabase(application).advogadoDAO()
         repository = AdvogadoRepository(advogadoDAO)
 
-//        var liveData = MutableLiveData<List<Advogado>>()
-//        var advogadosList = ArrayList<Advogado>()
-//        advogadosList.add(Advogado(1L,"Breno","","",ArrayList(),0F,""))
-//        advogadosList.add(Advogado(2L,"Marino","","",ArrayList(),0F,""))
-//        advogadosList.add(Advogado(3L,"Miguel","","",ArrayList(),0F,""))
-//        liveData.postValue(advogadosList)
+        var liveData = MutableLiveData<List<Advogado>>()
+        var advogadosList = ArrayList<Advogado>()
+        advogadosList.add(Advogado("","Breno","",ArrayList(),0F,""))
+        advogadosList.add(Advogado("","Marino","",ArrayList(),0F,""))
+        advogadosList.add(Advogado("","Miguel","",ArrayList(),0F,""))
+        liveData.postValue(advogadosList)
 
-        advogados = repository.advogados
+        advogados = liveData
     }
 
     fun insert(advogado: Advogado) = viewModelScope.launch(Dispatchers.IO) {
