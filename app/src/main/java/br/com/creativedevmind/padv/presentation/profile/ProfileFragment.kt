@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import br.com.concrete.canarinho.watcher.MascaraNumericaTextWatcher
 import br.com.creativedevmind.padv.R
 import br.com.creativedevmind.padv.data.remote.datasource.firebase.UserRemoteFirebaseDataSourceImpl
 import br.com.creativedevmind.padv.data.repository.UserRepositoryImpl
@@ -83,7 +84,9 @@ class ProfileFragment : BaseAuthFragment() {
         input_firstname = view.findViewById(R.id.input_firstname)
         input_lastname = view.findViewById(R.id.input_lastname)
         input_birthdate = view.findViewById(R.id.input_birthdate)
+        input_birthdate.addTextChangedListener(MascaraNumericaTextWatcher("##/##/####"))
         input_phone = view.findViewById(R.id.input_phone)
+        input_phone.addTextChangedListener(MascaraNumericaTextWatcher("(##) #####-####"))
         input_email = view.findViewById(R.id.input_email)
         textView4 = view.findViewById(R.id.textView4)
         cb_penal = view.findViewById(R.id.cb_penal)
