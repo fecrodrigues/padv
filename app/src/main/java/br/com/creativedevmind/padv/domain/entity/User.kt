@@ -9,5 +9,6 @@ data class User (
     val email: String = "",
     val phone: String = "",
     val accessInfo: Login = Login(),
-    val lawyerInfo: LawyerInfo = LawyerInfo()
+    val lawyerInfo: LawyerInfo = LawyerInfo(),
+    val advocate: Boolean? = false
 )

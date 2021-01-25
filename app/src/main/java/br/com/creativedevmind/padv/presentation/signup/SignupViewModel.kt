@@ -19,7 +19,7 @@ class SignupViewModel(
 
     fun createUser(firstName: String, lastName: String, birthDate: Date, email: String, password: String,
                    phone: String, isPenal: Boolean, isTrabalhista: Boolean, isConsumidor: Boolean,
-                isTributario: Boolean, isImobiliario: Boolean, biography: String, OABNumber: String ) {
+                isTributario: Boolean, isImobiliario: Boolean, biography: String, OABNumber: String, advocate: Boolean ) {
         viewModelScope.launch {
 
             var areasOfExpertise = mutableListOf<String>()
@@ -47,7 +47,7 @@ class SignupViewModel(
 
             val login = Login(email, password)
             val lawyerInfo = LawyerInfo(areasOfExpertise, biography, OABNumber)
-            var user = User(firstName, lastName, birthDate, email, phone, login, lawyerInfo)
+            var user = User(firstName, lastName, birthDate, email, phone, login, lawyerInfo, advocate)
 
             createState.value = createUserUseCase.create(user)
         }

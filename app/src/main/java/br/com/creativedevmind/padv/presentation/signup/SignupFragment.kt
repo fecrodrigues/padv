@@ -20,6 +20,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.properties.Delegates
 
 const val NAVIGATION_KEY = "NAV_KEY"
 
@@ -27,6 +28,8 @@ const val NAVIGATION_KEY = "NAV_KEY"
 class SignupFragment : BaseFragment() {
 
     override val layout = R.layout.fragment_signup
+
+    private var advocate: Boolean = false
 
     private val signupViewModel: SignupViewModel by lazy {
         ViewModelProvider(
@@ -69,7 +72,7 @@ class SignupFragment : BaseFragment() {
     }
 
     private fun setUpVariables(view: View) {
-        input_firstname = view.findViewById(R.id.tx_cadastro)
+        input_firstname = view.findViewById(R.id.input_firstname)
         input_lastname = view.findViewById(R.id.input_lastname)
 
         input_birthdate = view.findViewById(R.id.input_birthdate)
@@ -106,9 +109,15 @@ class SignupFragment : BaseFragment() {
                 birthdate = format.parse(birthdate_txt)
             }
 
+            val oabnumber_txt = input_OABNumber.text.toString()
+
+            if (oabnumber_txt != "") {
+                advocate = true
+            }
+
             signupViewModel.createUser(
-                input_firstname.text.toString(),
-                input_lastname.text.toString(),
+                input_firstname.text.toString().capitalize(),
+                input_lastname.text.toString().capitalize(),
                 birthdate,
                 input_email.text.toString(),
                 input_npassword.text.toString(),
@@ -119,7 +128,8 @@ class SignupFragment : BaseFragment() {
                 cb_tributario.isChecked,
                 cb_imobiliario.isChecked,
                 input_biography.text.toString(),
-                input_OABNumber.text.toString()
+                input_OABNumber.text.toString(),
+                advocate
             )
         }
 
