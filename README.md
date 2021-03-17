@@ -1,6 +1,6 @@
 # PADV - Procura de Advogados
 
-Este projeto tem como objetivo demonstrar os conhecimentos adquiridos na aula de Mobile através de um app que ajuda pessoas a procurarem advogados para resolverem algum problema júridico.
+Este projeto tem como objetivo demonstrar os conhecimentos adquiridos na aula de Mobile através de um app que facilita a procura de profissionais da área jurídica a fim de solucionar algo caso o questão que necessita desse tipo de profissional.
 
 ## Estrutura
 
