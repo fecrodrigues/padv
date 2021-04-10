@@ -9,8 +9,8 @@ Foi utilizada a seguinte estrutura de projeto aprendida em aula para melhor desa
 
 - Data
   - remote/datasource
-    - firebase - implementação da conversa do app com a camada de banco (no caso firebase);
-  - repository - Implementação dos métodos do repositório , no caso chamando o remote dataSource;
+    - firebase - implementação da conversa do app com a camada de banco (no caso Firebase);
+  - repository - Implementação dos métodos do repositório , no caso chamando o remote dataSource (Firestore);
 - Domain
   - entity - Objetos utilizados para transitar as informações;
   - exception - Tratativas de erros customizados;
@@ -19,3 +19,4 @@ Foi utilizada a seguinte estrutura de projeto aprendida em aula para melhor desa
 - Presentation
   - base e base/auth: Bases criadas como aprendido em aula para controle de telas logadas e não logadas;
   - ... Pacotes que contém o Fragment, ViewModel e ViewModelFactory (camada responsável pela logica da parte visual);
+
